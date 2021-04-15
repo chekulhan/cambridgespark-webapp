@@ -1,6 +1,2 @@
 flask
-pandas
-gunicorn
-xgboost
-sklearn
-pickle5
+
