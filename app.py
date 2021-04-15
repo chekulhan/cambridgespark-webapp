@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 # Set up the main route
 @app.route('/')
 def main():
-    print("It works")
+    return "It works"
 
 if __name__ == '__main__':
     app.run()
