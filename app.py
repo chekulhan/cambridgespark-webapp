@@ -1,6 +1,6 @@
 import flask
-#import pickle5 as pickle
-#import pandas as pd
+import pickle5 as pickle
+import pandas as pd
 
 # Use pickle to load in the pre-trained model
 #with open(f'model/bike_model_xgboost.pkl', 'rb') as f:
