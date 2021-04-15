@@ -1,5 +1,5 @@
 import flask
-import pickle
+import pickle5 as pickle
 import pandas as pd
 
 # Use pickle to load in the pre-trained model
