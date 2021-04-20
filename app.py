@@ -1,8 +1,9 @@
+# MUST upgrade pip on local env = "pip install --upgrade pip"  , so that skilearn installs
+
 import flask
 import pandas as pd
 import joblib
- 
-    
+
 filename = 'model/bike_model.sav'
 
 # Use joblib / pickle doesnt work to load in the pre-trained model
@@ -11,12 +12,21 @@ model = joblib.load(filename)
 # Initialise the Flask app
 app = flask.Flask(__name__, template_folder='templates')
 
-# Set up the main route
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def main():
+    return flask.render_template('main.html')
+
+@app.route('/imageclassifier')
+def imageclassifier():
+    return flask.render_template('instruments_newformat.html')
+
+
+@app.route('/dataanalysis', methods=['GET', 'POST'])
+
+def dataanalysis():
     if flask.request.method == 'GET':
         # Just render the initial form, to get input
-        return(flask.render_template('main.html'))
+        return(flask.render_template('pandas.html'))
     
     if flask.request.method == 'POST':
         # Extract the input
@@ -35,7 +45,7 @@ def main():
     
         # Render the form again, but add in the prediction and remind user
         # of the values they input before
-        return flask.render_template('main.html',
+        return flask.render_template('pandas.html',
                                      original_input={'Temperature':temperature,
                                                      'Humidity':humidity,
                                                      'Windspeed':windspeed},
