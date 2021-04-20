@@ -1,47 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<style>
-form {
-    margin: auto;
-    width: 35%;
-}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <title>MLPY - EduTech Experiments</title>
+    <link rel="icon" type="image" href="../static/images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/hero.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <style>
+    .columns:nth-child(2)
+    {margin-top: -10rem;}
+    </style>
+  </head>
+  <body>
+    <section class="hero is-info is-small">
+      <div class="hero-body">
+        <div class="container has-text-centered">
 
-.result {
-    margin: auto;
-    width: 35%;
-    border: 1px solid #ccc;
-}
-</style>
+          <img src="../static/images/logo.png" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+         
+          
+        </div>
+      </div>
+    </section>
+    <div class="box cta">
+      <p class="has-text-centered">
+        <span class="tag is-primary">New</span> The place to blend education and technology
+      </p>
+    </div>
+    <section class="container">
+      <div class="columns features">
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="../static/images/tfjs.jpeg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4>Machine Learning Image Prediction tool</h4>
+                <p>This interactive project uses <a href="https://www.tensorflow.org/js">Tensorflow JS</a> and <a href="teachablemachine.withgoogle.com">Teachable Machine from Google</a> to determine what instrument is found in an image. Take or upload a photo of a musical instrument to see if the machine can predict it.</p>
+                <a href="https://mlpython.eu.pythonanywhere.com/" target="_blank" class="button is-link modal-button" data-target="modal-image2">Predict</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="../static/images/medium.jpeg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4>Medium articles</h4>
+                <p>Interested in keeping up-to-date on education and technology? Check out all my articles including leadership, programming in education and even how the movie Top Gun can be used as a teaching resource and many more....  
+                </p>
+                <a href="https://che-kulhan.medium.com/" target="_blank" class="button is-link modal-button" data-target="modal-card">Go to Medium</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4 modal-button" data-target="modal-image">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="../static/images/jolastaikasi.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4>Euskara ikasi nahi al duzu?</h4>
+                <p>Want to learn the Euskera language? An interactive website where you can reiniforce your school learning through interactive games and activities. This site also includes blockly programming in euskera!</p>
+                <a href="http://jolastaikasi.pythonanywhere.com/" target="_blank" class="button is-link modal-button"  data-target="modal-image">Play and learn</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<head>
-    <title>Bike Usage Model</title>
-</head>
-<form action="{{ url_for('main') }}" method="POST">
-    <fieldset>
-        <legend>Input values:</legend>
-        Temperature:
-        <input name="temperature" type="number" required>
-        <br>
-        <br> Humidity:
-        <input name="humidity" type="number" required>
-        <br>
-        <br> Windspeed:
-        <input name="windspeed" type="number" required>
-        <br>
-        <br>
-        <input type="submit">
-    </fieldset>
-</form>
-<br>
-<div class="result" align="center">
-    {% if result %}
-    	{% for variable, value in original_input.items() %}
-    		<b>{{ variable }}</b> : {{ value }}
-    	{% endfor %}
-		<br>
-    	<br> Predicted number of bikes in use:
-   		<p style="font-size:50px">{{ result }}</p>
-    {% endif %}
-</div>
+      </div><!-- end row -->
 
+      <!-- next row -->
+      <div class="columns features">
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="../static/images/colab.jpeg" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4>Data analysis with machine learning</h4>
+                <p>This interactive project, still under development, makes use of Google's Colab to generate a model, and then predicts with your input. It is another example of Machine Learning.</p>
+                <a href="https://mlpython.eu.pythonanywhere.com/" target="_blank" class="button is-link modal-button" data-target="modal-image2">Under construction</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </section>
+
+    
+    <footer>
+      <div class="content has-text-centered">
+        <div class="control level-item">
+          <a href="https://github.com/BulmaTemplates/bulma-templates">
+            <div class="tags has-addons"> 
+              <span class="tag is-dark">Bulma Templates</span>
+              <span class="tag is-info">MIT license</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer> 
+   
+    
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), { });
+        });
+        </script>  
+  </body>
+  <!-- https://bulmatemplates.github.io/bulma-templates/templates/modal-cards.html -->
 </html>
