@@ -6,8 +6,6 @@ import joblib
 
 filename = 'model/bike_model.sav'
 
-# Use joblib / pickle doesnt work to load in the pre-trained model
-model = joblib.load(filename)
 
 # Initialise the Flask app
 app = flask.Flask(__name__, template_folder='templates')
@@ -40,6 +38,9 @@ def dataanalysis():
                                        dtype=float,
                                        index=['input'])
 
+        # Use joblib / pickle doesnt work to load in the pre-trained model
+        model = joblib.load(filename)
+        
         # Get the model's prediction
         prediction = model.predict(input_variables)[0]
     
